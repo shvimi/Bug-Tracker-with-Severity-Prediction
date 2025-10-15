@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report Bug</title>
+    <style>
+        body { font-family: Arial; background: #f4f4f4; text-align: center; }
+        form { margin: 30px auto; width: 400px; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+        input, textarea { width: 90%; padding: 8px; margin: 8px 0; border-radius: 5px; border: 1px solid #ccc; }
+        button { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; }
+        button:hover { background: #0056b3; }
+        a { text-decoration: none; color: #007bff; }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='bug_logo.png') }}" alt="Logo" style="height:70px;">
+    <h1>🐞 Report a New Bug</h1>
+
+    <form method="POST">
+        <input type="text" name="title" placeholder="Bug Title" required><br>
+        <textarea name="description" placeholder="Describe the issue..." rows="5"></textarea><br>
+        <input type="text" name="reporter" placeholder="Your Name"><br>
+        <input type="text" name="assignee" placeholder="Assign to"><br>
+        <button type="submit">Submit Bug</button>
+    </form>
+    <a href="{{ url_for('index') }}">🔙 Back to Home</a>
+</body>
+</html>

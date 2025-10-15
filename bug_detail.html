@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bug Details</title>
+    <style>
+        body { font-family: Arial; background: #f9f9f9; text-align: center; }
+        .card { background: white; width: 400px; margin: 30px auto; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+        h1 { color: #007bff; }
+        p { text-align: left; margin-left: 40px; }
+        a { text-decoration: none; color: #007bff; }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='bug_logo.png') }}" alt="Logo" style="height:60px;">
+    <div class="card">
+        <h1>{{ bug.title }}</h1>
+        <p><b>Severity:</b> {{ bug.severity }}</p>
+        <p><b>Status:</b> {{ bug.status }}</p>
+        <p><b>Description:</b> {{ bug.description }}</p>
+        <p><b>Reporter:</b> {{ bug.reporter }}</p>
+        <p><b>Assignee:</b> {{ bug.assignee }}</p>
+        <p><b>Reported On:</b> {{ bug.created_at.strftime('%Y-%m-%d %H:%M') }}</p>
+    </div>
+    <a href="{{ url_for('index') }}">🔙 Back to Home</a>
+</body>
+</html>

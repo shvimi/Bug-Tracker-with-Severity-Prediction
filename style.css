@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: url("https://cdn.pixabay.com/photo/2017/08/30/01/05/code-2694149_1280.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #222;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: darkblue;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #f4f4f4;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+.flash.success {
+    background: #d4edda;
+    padding: 10px;
+    border: 1px solid green;
+    margin-bottom: 10px;
+}
